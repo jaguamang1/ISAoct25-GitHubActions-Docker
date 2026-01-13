@@ -36,7 +36,7 @@ jobs:
         username: ${{secrets.SSH_USER}}
         key: ${{secrets.SSH_KEY}}
         port: ${{secrets.SSH_PORT}}
-        script:
+        script: |
           docker image pull jaguamang/isa-oct25-cicd-docker:flaskapp
           docker container stop flask
           docker container rm flask
